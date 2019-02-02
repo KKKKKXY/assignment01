@@ -155,7 +155,7 @@ public class GameLoop implements Runnable {
                 //lifeBar.setLifeBar(mainCharacter.getScore());
             if (mainCharacter.getScore() >= 51 ) {
                 Alert a = new Alert(Alert.AlertType.WARNING);
-                a.setContentText("The Winner is KEN MASTER\nCongratulation...!");
+                a.setContentText("The Winner is KEN MASTER\nCongratulations...!");
                 a.show();
                 running = false;
                 //Timer timer = new Timer();
