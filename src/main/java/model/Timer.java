@@ -24,7 +24,7 @@ public class Timer extends Pane {
         setTranslateX(x);
         setTranslateY(y);
         timer.setFont(Font.font("Verdana", FontWeight.BOLD,50));
-
+        timer.setTextFill(Color.web("#FFF"));
         clock = new Timeline(new KeyFrame(Duration.ZERO, e -> {
             int secondFact = LocalDateTime.now().getSecond();
             second++;
