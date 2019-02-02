@@ -27,7 +27,7 @@ public class Platform extends Pane {
     //private LifeBar2 lifeBar2;
     //private FighterImage fighterImage;
     //private FighterImage fighterImage2;
-    //private Timer timer;
+    private Timer timer;
 
     private Keys keys;
 
