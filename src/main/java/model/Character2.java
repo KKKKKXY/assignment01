@@ -67,7 +67,7 @@ public class Character2 extends Pane {
         this.moveForwardImg = new Image(getClass().getResourceAsStream("/idleCharacter2.png"));
         this.moveBackwardImg = new Image(getClass().getResourceAsStream("/idleCharacter2.png"));
         this.attackImg = new Image(getClass().getResourceAsStream("/attackByPunchingCharacter2.png"));
-        this.superAttackImg = new Image(getClass().getResourceAsStream("/superAttackCharacter02.png"));
+        //this.superAttackImg = new Image(getClass().getResourceAsStream("/superAttackCharacter02.png"));
         this.kneelDownImg  = new Image(getClass().getResourceAsStream("/crunchCharacter2.png"));
         this.kneelDownAttackImg = new Image(getClass().getResourceAsStream("/kneelDownAttackCharacter2.png"));
         this.rotateAttackImg = new Image(getClass().getResourceAsStream("/rotateAttackCharacter2.png"));
