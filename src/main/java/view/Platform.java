@@ -62,7 +62,7 @@ public class Platform extends Pane {
         //getChildren().add(lifeBar2);
         //getChildren().add(fighterImage);
         //getChildren().add(fighterImage2);
-        //getChildren().add(timer);
+        getChildren().add(timer);
         getChildren().addAll(characterList);
         getChildren().addAll(characterList2);
     }
