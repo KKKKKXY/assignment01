@@ -15,5 +15,33 @@ public class Timer extends Pane {
     private int minute = 0;
     private int hour=0;
     private Label timer;
+    Timeline clock;
+
+    public Timer(){}
+
+    public Timer(int x, int y){
+        timer = new Label("0");
+        setTranslateX(x);
+        setTranslateY(y);
+        clock = new Timeline(new KeyFrame(Duration.ZERO, e -> {
+            int secondFact = LocalDateTime.now().getSecond();
+            second++;
+
+            if (second==59){
+                this.second = 0;
+                minute++;
+            }
+            timer.setText(Integer.toString(minute)+" : "+Integer.toString(second));
+        }),
+                new KeyFrame(Duration.seconds(1))
+        );
+        clock.setCycleCount(Animation.INDEFINITE);
+        clock.play();
+        getChildren().addAll(timer);
+    }
+
+    public void stopClock() {
+        this.timer.setText("0 : 0");
+    }
 
 }
