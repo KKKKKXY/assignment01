@@ -106,7 +106,14 @@ public class Character2 extends Pane {
         isAttack = true;
     }
 
-
+    public void superAttack() {
+        isAttack = false;
+        isKneelDownAttack = false;
+        isRotateAttack = false;
+        isKneelDown = false;
+        isSuperAttack = true;
+    }
+    
     public void KneelDown() {
         isAttack = false;
         isSuperAttack = false;
@@ -204,6 +211,24 @@ public class Character2 extends Pane {
         }
     }
 
+    public void executeSuperAttack(ArrayList<Character> characterArrayList) throws InterruptedException {
+
+        if (isSuperAttack) {
+            setTranslateX(0);
+            setTranslateY(Platform.GROUND);
+
+            if (currentImageView != superAttackView) {
+                javafx.application.Platform.runLater(() -> {
+                    superAttackView.setFitWidth(1600);
+                    superAttackView.setFitHeight(250);
+                    setCurrentImageView(superAttackView);
+                });
+            }
+            toKill = new ArrayList(characterArrayList);
+            x = startX;
+            y = startY;
+        }
+    }
 
     public void move() {
         if (direction.equals(Direction.W) || direction.equals(Direction.UPLEFT) || direction.equals(Direction.UPRIGHT)) {
@@ -253,7 +278,7 @@ public class Character2 extends Pane {
     public void repaint(ArrayList<Character> characterArrayList) throws InterruptedException {
         move();
         executeAttack();
-        //executeSuperAttack(characterArrayList);
+        executeSuperAttack(characterArrayList);
         executeKneelDown();
         executeKneelDownAttack();
         //executeRotateAttack();
