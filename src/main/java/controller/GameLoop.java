@@ -158,9 +158,9 @@ public class GameLoop implements Runnable {
                 alert.setContentText("The Winner is KEN MASTER\nCongratulation...!");
                 alert.show();
                 running = false;
-                //Timer timer = new Timer();
-                //timer.stopClock();
-                mainCharacter.stopAttack();
+                Timer timer = new Timer();
+                timer.stopClock();
+                //mainCharacter.stopAttack();
 
             }
 
@@ -175,8 +175,8 @@ public class GameLoop implements Runnable {
                 alert.setContentText("The Winner is AKUMU\nCongratulation...!");
                 alert.show();
                 running = false;
-               // Timer timer = new Timer();
-                //timer.stopClock();
+                Timer timer = new Timer();
+                timer.stopClock();
                 //mainCharacter.stopAttack();
 
             }
