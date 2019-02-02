@@ -1,12 +1,17 @@
 package model;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.scene.control.ProgressBar;
+import javafx.scene.control.Slider;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
 
-public class LifeBar2 extends Pane {
+import javax.swing.*;
 
+public class LifeBar extends Pane {
     ProgressBar pbar;
-    public LifeBar2(int x, int y) {
+    public LifeBar(int x, int y) {
         setTranslateX(x);
         setTranslateY(y);
         pbar = new ProgressBar();
@@ -18,6 +23,5 @@ public class LifeBar2 extends Pane {
         getChildren().add(pbar);
     }
 
-    public void setLifeBar(double lifePercentage){ this.pbar.setProgress(lifePercentage/50);
-    }
+    public void setLifeBar(double lifePercentage){this.pbar.setProgress(lifePercentage/50);}
 }
