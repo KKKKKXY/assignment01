@@ -72,7 +72,7 @@ public class GameLoop implements Runnable {
         }
 
         if (platform.getKeys().isPressed(KeyCode.CONTROL)) {
-            mainCharacter.superAttack();
+             mainCharacter.superAttack();
         }
         if (platform.getKeys().isPressed(KeyCode.ENTER)) {
             mainCharacter.KneelDown();
@@ -135,18 +135,18 @@ public class GameLoop implements Runnable {
             mainCharacter.attack();
         }
 
-        //if (platform.getKeys().isPressed(KeyCode.G)) {
-          //  mainCharacter.superAttack();
-        //}
+        if (platform.getKeys().isPressed(KeyCode.G)) {
+          mainCharacter.superAttack();
+        }
         if (platform.getKeys().isPressed(KeyCode.R)) {
             mainCharacter.KneelDown();
         }
         if (platform.getKeys().isPressed(KeyCode.E)) {
             mainCharacter.kneelDownAttack();
         }
-        //if (platform.getKeys().isPressed(KeyCode.T)) {
-          //  mainCharacter.rotateAttack();
-        //}
+        if (platform.getKeys().isPressed(KeyCode.T)) {
+            mainCharacter.rotateAttack();
+        }
     }
     private void updateScore(Character mainCharacter) {
 
