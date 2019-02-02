@@ -27,7 +27,7 @@ public class Platform extends Pane {
     //private LifeBar2 lifeBar2;
     //private FighterImage fighterImage;
     //private FighterImage fighterImage2;
-    //private Timer timer;
+    private Timer timer;
 
     private Keys keys;
 
@@ -46,13 +46,13 @@ public class Platform extends Pane {
         score = new Score(50,HEIGHT - 50);
         score2 = new Score2(1350, HEIGHT - 50);
 
-        //lifeBar = new LifeBar(250,10);
-        //lifeBar2 = new LifeBar2(950,10);
+        lifeBar = new LifeBar(250,10);
+        lifeBar2 = new LifeBar2(950,10);
 
         //fighterImage = new FighterImage(0,0,new Image(getClass().getResourceAsStream("/Ken_face.gif")));
         //fighterImage2 = new FighterImage(1330,0, new Image(getClass().getResourceAsStream("/akuma.png")));
 
-        //timer = new Timer(675,0);
+        timer = new Timer(675,0);
         characterList.add(mainCharacter);
         characterList2.add(anotherCharacter);
         getChildren().add(backgroundImg);
@@ -62,7 +62,7 @@ public class Platform extends Pane {
         //getChildren().add(lifeBar2);
         //getChildren().add(fighterImage);
         //getChildren().add(fighterImage2);
-        //getChildren().add(timer);
+        getChildren().add(timer);
         getChildren().addAll(characterList);
         getChildren().addAll(characterList2);
     }
@@ -77,9 +77,9 @@ public class Platform extends Pane {
 
     public Score2 getScore2() { return score2; }
 
-    //public LifeBar getLifeBar() { return  lifeBar;}
+    public LifeBar getLifeBar() { return  lifeBar;}
 
-    //public LifeBar2 getLifeBar2() { return  lifeBar2;}
+    public LifeBar2 getLifeBar2() { return  lifeBar2;}
 
     public ArrayList<Character> getCharacterList() { return  characterList;}
 

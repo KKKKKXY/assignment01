@@ -71,12 +71,12 @@ public class GameLoop implements Runnable {
             mainCharacter.attack();
         }
 
-       // if (platform.getKeys().isPressed(KeyCode.CONTROL)) {
-         //   mainCharacter.superAttack();
-        //}
-        //if (platform.getKeys().isPressed(KeyCode.ENTER)) {
-          //  mainCharacter.KneelDown();
-        // }
+        if (platform.getKeys().isPressed(KeyCode.CONTROL)) {
+             mainCharacter.superAttack();
+        }
+        if (platform.getKeys().isPressed(KeyCode.ENTER)) {
+            mainCharacter.KneelDown();
+        }
         if (platform.getKeys().isPressed(KeyCode.P)) {
             mainCharacter.powerAttack();
         }
@@ -135,31 +135,31 @@ public class GameLoop implements Runnable {
             mainCharacter.attack();
         }
 
-        //if (platform.getKeys().isPressed(KeyCode.G)) {
-          //  mainCharacter.superAttack();
-        //}
+        if (platform.getKeys().isPressed(KeyCode.G)) {
+          mainCharacter.superAttack();
+        }
         if (platform.getKeys().isPressed(KeyCode.R)) {
             mainCharacter.KneelDown();
         }
         if (platform.getKeys().isPressed(KeyCode.E)) {
             mainCharacter.kneelDownAttack();
         }
-        //if (platform.getKeys().isPressed(KeyCode.T)) {
-          //  mainCharacter.rotateAttack();
-        //}
+        if (platform.getKeys().isPressed(KeyCode.T)) {
+            mainCharacter.rotateAttack();
+        }
     }
     private void updateScore(Character mainCharacter, Score score) {
         javafx.application.Platform.runLater(() -> {
                 score.setPoint(mainCharacter.getScore());
                 //lifeBar.setLifeBar(mainCharacter.getScore());
-            if (mainCharacter.getScore() >= 50 ) {
-                Alert alert = new Alert(Alert.AlertType.WARNING);
-                alert.setContentText("The Winner is KEN MASTER\nCongratulation...!");
-                alert.show();
+            if (mainCharacter.getScore() >= 51 ) {
+                Alert a = new Alert(Alert.AlertType.WARNING);
+                a.setContentText("The Winner is KEN MASTER\nCongratulations...!");
+                a.show();
                 running = false;
-                //Timer timer = new Timer();
-                //timer.stopClock();
-                mainCharacter.stopAttack();
+                Timer timer = new Timer();
+                timer.stopClock();
+                //mainCharacter.stopAttack();
 
             }
 
@@ -174,8 +174,8 @@ public class GameLoop implements Runnable {
                 alert.setContentText("The Winner is AKUMU\nCongratulation...!");
                 alert.show();
                 running = false;
-               // Timer timer = new Timer();
-                //timer.stopClock();
+                Timer timer = new Timer();
+                timer.stopClock();
                 //mainCharacter.stopAttack();
 
             }
