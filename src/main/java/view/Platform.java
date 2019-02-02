@@ -21,8 +21,8 @@ public class Platform extends Pane {
     private ArrayList<Character2> characterList2;
     private Character mainCharacter;
     private Character2 anotherCharacter;
-    //private Score score;
-    //private Score2 score2;
+    private Score score;
+    private Score2 score2;
     //private LifeBar lifeBar;
     //private LifeBar2 lifeBar2;
     //private FighterImage fighterImage;
@@ -43,8 +43,8 @@ public class Platform extends Pane {
         anotherCharacter = new Character2(1300,GROUND+((HEIGHT-GROUND)/2)-50);
 
         //buildEnemyList();
-        //score = new Score(50,HEIGHT - 50);
-        //score2 = new Score2(1350, HEIGHT - 50);
+        score = new Score(50,HEIGHT - 50);
+        score2 = new Score2(1350, HEIGHT - 50);
 
         //lifeBar = new LifeBar(250,10);
         //lifeBar2 = new LifeBar2(950,10);
@@ -56,9 +56,9 @@ public class Platform extends Pane {
         characterList.add(mainCharacter);
         characterList2.add(anotherCharacter);
         getChildren().add(backgroundImg);
-        //getChildren().add(score);
+        getChildren().add(score);
         //getChildren().add(lifeBar);
-        //getChildren().add(score2);
+        getChildren().add(score2);
         //getChildren().add(lifeBar2);
         //getChildren().add(fighterImage);
         //getChildren().add(fighterImage2);
@@ -73,9 +73,9 @@ public class Platform extends Pane {
 
     public Keys getKeys() { return keys; }
 
-    //public Score getScore() {return score;}
+    public Score getScore() {return score;}
 
-    //public Score2 getScore2() { return score2; }
+    public Score2 getScore2() { return score2; }
 
     //public LifeBar getLifeBar() { return  lifeBar;}
 
