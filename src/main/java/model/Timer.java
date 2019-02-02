@@ -23,6 +23,8 @@ public class Timer extends Pane {
         timer = new Label("0");
         setTranslateX(x);
         setTranslateY(y);
+        timer.setFont(Font.font("Verdana", FontWeight.BOLD,50));
+
         clock = new Timeline(new KeyFrame(Duration.ZERO, e -> {
             int secondFact = LocalDateTime.now().getSecond();
             second++;
