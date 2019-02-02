@@ -148,10 +148,10 @@ public class GameLoop implements Runnable {
             mainCharacter.rotateAttack();
         }
     }
-    private void updateScore(Character mainCharacter, Score score) {
+    private void updateScore(Character mainCharacter, Score score, LifeBar2 lifeBar) {
         javafx.application.Platform.runLater(() -> {
                 score.setPoint(mainCharacter.getScore());
-                //lifeBar.setLifeBar(mainCharacter.getScore());
+                lifeBar.setLifeBar(mainCharacter.getScore());
             if (mainCharacter.getScore() >= 51 ) {
                 Alert a = new Alert(Alert.AlertType.WARNING);
                 a.setContentText("The Winner is KEN MASTER\nCongratulations...!");
@@ -165,8 +165,8 @@ public class GameLoop implements Runnable {
 
         });
     }
-    private void updateScore(Character2 mainCharacter, Score2 score2) {
-            //lifeBar.setLifeBar(mainCharacter.getScore2());
+    private void updateScore(Character2 mainCharacter, Score2 score2, LifeBar lifeBar) {
+        lifeBar.setLifeBar(mainCharacter.getScore2());
         javafx.application.Platform.runLater(() -> {
         score2.setPoint(mainCharacter.getScore2());
             if (mainCharacter.getScore2() >= 50 ) {
@@ -176,7 +176,7 @@ public class GameLoop implements Runnable {
                 running = false;
                 Timer timer = new Timer();
                 timer.stopClock();
-                //mainCharacter.stopAttack();
+                mainCharacter.stopAttack();
 
             }
         });
@@ -188,9 +188,9 @@ public class GameLoop implements Runnable {
             float time = System.currentTimeMillis();
 
             update(platform.getMainCharacter());
-            updateScore(platform.getMainCharacter(), platform.getScore());
+            updateScore(platform.getMainCharacter(), platform.getScore(),platform.getLifeBar2());
             update2(platform.getAnotherCharacter());
-            updateScore(platform.getAnotherCharacter(),platform.getScore2());
+            updateScore(platform.getAnotherCharacter(),platform.getScore2(),platform.getLifeBar());
             time = System.currentTimeMillis() - time;
 
             if (time < interval) {
