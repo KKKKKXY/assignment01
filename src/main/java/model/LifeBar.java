@@ -23,7 +23,5 @@ public class LifeBar extends Pane {
         getChildren().add(pbar);
     }
 
-    public void setLifeBar(double lifePercentage){
-        this.pbar.setProgress(lifePercentage/50);
-    }
+    public void setLifeBar(double lifePercentage){this.pbar.setProgress(lifePercentage/50);}
 }
