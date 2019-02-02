@@ -148,11 +148,11 @@ public class GameLoop implements Runnable {
           //  mainCharacter.rotateAttack();
         //}
     }
-    private void updateScore(Character mainCharacter) {
+    private void updateScore(Character mainCharacter,LifeBar2 lifeBar) {
 
         javafx.application.Platform.runLater(() -> {
                 //score.setPoint(mainCharacter.getScore());
-                //lifeBar.setLifeBar(mainCharacter.getScore());
+                lifeBar.setLifeBar(mainCharacter.getScore());
             if (mainCharacter.getScore() >= 50 ) {
                 Alert alert = new Alert(Alert.AlertType.WARNING);
                 alert.setContentText("The Winner is KEN MASTER\nCongratulation...!");
@@ -166,10 +166,10 @@ public class GameLoop implements Runnable {
 
         });
     }
-    private void updateScore(Character2 mainCharacter) {
+    private void updateScore(Character2 mainCharacter,LifeBar lifeBar) {
         javafx.application.Platform.runLater(() -> {
             //score2.setPoint(mainCharacter.getScore2());
-            //lifeBar.setLifeBar(mainCharacter.getScore2());
+            lifeBar.setLifeBar(mainCharacter.getScore2());
             if (mainCharacter.getScore2() >= 50 ) {
                 Alert alert = new Alert(Alert.AlertType.WARNING);
                 alert.setContentText("The Winner is AKUMU\nCongratulation...!");
@@ -189,10 +189,10 @@ public class GameLoop implements Runnable {
             float time = System.currentTimeMillis();
 
             update(platform.getMainCharacter());
-            updateScore(platform.getMainCharacter());
+            updateScore(platform.getMainCharacter(),platform.getLifeBar2());
 
             update2(platform.getAnotherCharacter());
-            updateScore(platform.getAnotherCharacter());
+            updateScore(platform.getAnotherCharacter(),platform.getLifeBar());
 
             time = System.currentTimeMillis() - time;
 
