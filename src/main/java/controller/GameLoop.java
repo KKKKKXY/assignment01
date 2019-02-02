@@ -170,7 +170,7 @@ public class GameLoop implements Runnable {
         javafx.application.Platform.runLater(() -> {
             //score2.setPoint(mainCharacter.getScore2());
             //lifeBar.setLifeBar(mainCharacter.getScore2());
-            if (mainCharacter.getScore2() >= 50 ) {
+            if (mainCharacter.getScore2() >= 51 ) {
                 Alert a = new Alert(Alert.AlertType.WARNING);
                 a.setContentText("The Winner is AKUMU\nCongratulation...!");
                 a.show();
