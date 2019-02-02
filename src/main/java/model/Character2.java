@@ -219,8 +219,8 @@ public class Character2 extends Pane {
 
             if (currentImageView != superAttackView) {
                 javafx.application.Platform.runLater(() -> {
-                    //superAttackView.setFitWidth(1600);
-                    //superAttackView.setFitHeight(250);
+                    superAttackView.setFitWidth(1600);
+                    superAttackView.setFitHeight(250);
                     setCurrentImageView(superAttackView);
                 });
             }
