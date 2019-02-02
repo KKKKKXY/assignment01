@@ -13,6 +13,7 @@ public class LifeBar2 extends Pane {
         pbar.setScaleX(5);
         pbar.setProgress(100);
         pbar.setMaxSize(100,30);
+        pbar.setStyle("-fx-background-color: -fx-box-border");
         pbar.setTranslateX(100);
         getChildren().add(pbar);
     }
