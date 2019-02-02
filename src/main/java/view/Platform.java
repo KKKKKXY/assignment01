@@ -52,7 +52,7 @@ public class Platform extends Pane {
         //fighterImage = new FighterImage(0,0,new Image(getClass().getResourceAsStream("/Ken_face.gif")));
         //fighterImage2 = new FighterImage(1330,0, new Image(getClass().getResourceAsStream("/akuma.png")));
 
-        //timer = new Timer(675,0);
+        timer = new Timer(675,0);
         characterList.add(mainCharacter);
         characterList2.add(anotherCharacter);
         getChildren().add(backgroundImg);
