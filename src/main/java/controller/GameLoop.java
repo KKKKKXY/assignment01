@@ -71,12 +71,12 @@ public class GameLoop implements Runnable {
             mainCharacter.attack();
         }
 
-       // if (platform.getKeys().isPressed(KeyCode.CONTROL)) {
-         //   mainCharacter.superAttack();
-        //}
-        //if (platform.getKeys().isPressed(KeyCode.ENTER)) {
-          //  mainCharacter.KneelDown();
-        // }
+        if (platform.getKeys().isPressed(KeyCode.CONTROL)) {
+            mainCharacter.superAttack();
+        }
+        if (platform.getKeys().isPressed(KeyCode.ENTER)) {
+            mainCharacter.KneelDown();
+        }
         if (platform.getKeys().isPressed(KeyCode.P)) {
             mainCharacter.powerAttack();
         }

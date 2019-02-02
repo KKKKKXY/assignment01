@@ -67,7 +67,7 @@ public class Character2 extends Pane {
         this.moveForwardImg = new Image(getClass().getResourceAsStream("/idleCharacter2.png"));
         this.moveBackwardImg = new Image(getClass().getResourceAsStream("/idleCharacter2.png"));
         this.attackImg = new Image(getClass().getResourceAsStream("/attackByPunchingCharacter2.png"));
-        //this.superAttackImg = new Image(getClass().getResourceAsStream("/superAttackCharacter02.png"));
+        this.superAttackImg = new Image(getClass().getResourceAsStream("/superAttackCharacter02.png"));
         this.kneelDownImg  = new Image(getClass().getResourceAsStream("/crunchCharacter2.png"));
         this.kneelDownAttackImg = new Image(getClass().getResourceAsStream("/kneelDownAttackCharacter2.png"));
         this.rotateAttackImg = new Image(getClass().getResourceAsStream("/rotateAttackCharacter2.png"));
@@ -77,7 +77,7 @@ public class Character2 extends Pane {
         this.moveBackwardView = new AnimatedSprite(moveBackwardImg, 3, 3, (int) 73, 102);
         this.attackView =new AnimatedSprite(attackImg, 4, 4,  (int)104.75, 102);
                 //AnimatedSprite(attackImg, 4, 4,  (int)104.75, 102);
-        //this.superAttackView = new AnimatedSprite(superAttackImg, 21, 3, 960, 191);
+        this.superAttackView = new AnimatedSprite(superAttackImg, 21, 3, 960, 191);
         this.kneelDownView = new AnimatedSprite(kneelDownImg,2,2,73,102);
         this.kneelDownAttackView =  new AnimatedSprite(kneelDownAttackImg,8,8,(int) 128.5,102);
         this.rotateAttackView =  new AnimatedSprite(rotateAttackImg,7,7,(int) 104.428571429,108);
@@ -113,7 +113,7 @@ public class Character2 extends Pane {
         isKneelDown = false;
         isSuperAttack = true;
     }
-    
+
     public void KneelDown() {
         isAttack = false;
         isSuperAttack = false;
