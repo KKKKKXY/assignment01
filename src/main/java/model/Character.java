@@ -1,6 +1,5 @@
 package model;
 
-import javafx.scene.control.Alert;
 import javafx.scene.image.Image;
 import javafx.scene.layout.Pane;
 import view.Platform;
@@ -20,7 +19,7 @@ public class Character extends Pane {
     private Image moveForwardImg;
     private Image moveBackwardImg;
     private Image attackImg;
-    private Image superAttackImg;
+    private Image superAttackImg01;
     private Image kneelDownImg;
     private Image powerAttackImg;
     private Image collapsedImg;
@@ -29,7 +28,7 @@ public class Character extends Pane {
     private AnimatedSprite moveForwardView;
     private AnimatedSprite moveBackwardView;
     private AnimatedSprite attackView;
-    private AnimatedSprite superAttackView;
+    private AnimatedSprite superAttackView01;
 
     private AnimatedSprite kneelDownView;
     private AnimatedSprite currentImageView;
@@ -70,7 +69,7 @@ public class Character extends Pane {
         this.moveForwardImg = new Image(getClass().getResourceAsStream("/moveForwardCharacter1.png"));
         this.moveBackwardImg = new Image(getClass().getResourceAsStream("/moveForwardCharacter1.png"));
         this.attackImg = new Image(getClass().getResourceAsStream("/attackByKickingCharacter1.png"));
-        this.superAttackImg = new Image(getClass().getResourceAsStream("/superAttackCharacter1.png"));
+        this.superAttackImg01 = new Image(getClass().getResourceAsStream("/superAttackCharacter01.png"));
         this.kneelDownImg  = new Image(getClass().getResourceAsStream("/kneelDown.png"));
         this.powerAttackImg  = new Image(getClass().getResourceAsStream("/powerAttackCharacter1.png"));
         this.collapsedImg  = new Image(getClass().getResourceAsStream("/kneelDown.png"));
@@ -79,7 +78,7 @@ public class Character extends Pane {
         this.moveForwardView = new AnimatedSprite(moveForwardImg, 5, 5, (int)43.2, 90);
         this.moveBackwardView = new AnimatedSprite(moveBackwardImg, 5, 5, (int)43.2, 90);
         this.attackView = new AnimatedSprite(attackImg, 5, 5,  85, 90);
-        this.superAttackView = new AnimatedSprite(superAttackImg, 21, 3, 960, 191);
+        this.superAttackView01 = new AnimatedSprite(superAttackImg01, 21, 3, 960, 191);
         this.kneelDownView = new AnimatedSprite(kneelDownImg,1,1,50,90);
         this.powerAttackView = new AnimatedSprite(powerAttackImg,5,5,(int) 131.8,90);
         this.currentImageView = new AnimatedSprite(collapsedImg,1,1,50,90);
@@ -204,11 +203,11 @@ public class Character extends Pane {
             setTranslateX(0);
             setTranslateY(Platform.GROUND);
 
-            if (currentImageView != superAttackView) {
+            if (currentImageView != superAttackView01) {
                 javafx.application.Platform.runLater(() -> {
-                    superAttackView.setFitWidth(1600);
-                    superAttackView.setFitHeight(250);
-                    setCurrentImageView(superAttackView);
+                    //superAttackView01.setFitWidth(1600);
+                    //superAttackView01.setFitHeight(250);
+                    setCurrentImageView(superAttackView01);
                 });
             }
 
