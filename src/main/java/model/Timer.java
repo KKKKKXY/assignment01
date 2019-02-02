@@ -10,5 +10,10 @@ import javafx.scene.text.FontWeight;
 import javafx.util.Duration;
 
 import java.time.LocalDateTime;
-public class Timer {
+public class Timer extends Pane {
+    private int second;
+    private int minute = 0;
+    private int hour=0;
+    private Label timer;
+
 }
