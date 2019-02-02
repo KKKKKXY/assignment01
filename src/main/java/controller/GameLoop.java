@@ -171,9 +171,9 @@ public class GameLoop implements Runnable {
             //score2.setPoint(mainCharacter.getScore2());
             //lifeBar.setLifeBar(mainCharacter.getScore2());
             if (mainCharacter.getScore2() >= 50 ) {
-                Alert alert = new Alert(Alert.AlertType.WARNING);
-                alert.setContentText("The Winner is AKUMU\nCongratulation...!");
-                alert.show();
+                Alert a = new Alert(Alert.AlertType.WARNING);
+                a.setContentText("The Winner is AKUMU\nCongratulation...!");
+                a.show();
                 running = false;
                // Timer timer = new Timer();
                 //timer.stopClock();
