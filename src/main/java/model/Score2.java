@@ -14,6 +14,9 @@ public class Score2 extends Pane {
         point = new Label("0");
         setTranslateX(x);
         setTranslateY(y);
+        point.setFont(Font.font("Verdana", FontWeight.BOLD,30));
+        point.setTextFill(Color.web("#FFF"));
+        getChildren().addAll(point);
 
     }
     public void setPoint(int score) {
