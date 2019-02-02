@@ -198,7 +198,25 @@ public class Character extends Pane {
         }
     }
 
+    public void executeSuperAttack(ArrayList<Character2> characterList2) throws InterruptedException {
 
+        if (isSuperAttack) {
+            setTranslateX(0);
+            setTranslateY(Platform.GROUND);
+
+            if (currentImageView != superAttackView) {
+                javafx.application.Platform.runLater(() -> {
+                    superAttackView.setFitWidth(1600);
+                    superAttackView.setFitHeight(250);
+                    setCurrentImageView(superAttackView);
+                });
+            }
+
+            toKill = new ArrayList(characterList2);
+            x = startX;
+            y = startY;
+        }
+    }
 
     public void collided(Character2 c) {
         if (isAttack || isPowerAttack ) {
@@ -256,7 +274,7 @@ public class Character extends Pane {
     public void repaint(ArrayList<Character2> characterList2) throws InterruptedException {
         move();
         executeAttack();
-        //executeSuperAttack(characterList2);
+        executeSuperAttack(characterList2);
         //executeKneelDown();
         executePowerAttack();
     }
