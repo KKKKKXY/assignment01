@@ -23,8 +23,8 @@ public class Platform extends Pane {
     private Character2 anotherCharacter;
     private Score score;
     private Score2 score2;
-    //private LifeBar lifeBar;
-    //private LifeBar2 lifeBar2;
+    private LifeBar lifeBar;
+    private LifeBar2 lifeBar2;
     //private FighterImage fighterImage;
     //private FighterImage fighterImage2;
     private Timer timer;
@@ -57,9 +57,9 @@ public class Platform extends Pane {
         characterList2.add(anotherCharacter);
         getChildren().add(backgroundImg);
         getChildren().add(score);
-        //getChildren().add(lifeBar);
+        getChildren().add(lifeBar);
         getChildren().add(score2);
-        //getChildren().add(lifeBar2);
+        getChildren().add(lifeBar2);
         //getChildren().add(fighterImage);
         //getChildren().add(fighterImage2);
         getChildren().add(timer);
